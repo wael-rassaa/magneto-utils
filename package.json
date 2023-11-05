@@ -1,20 +1,28 @@
 {
-  "name": "@wael-rassaa/magneto-utils",
+  "name": "magneto-utils",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "packageManager": "pnpm@8.10.2",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/wael-rassaa/magneto-utils"
   },
+  "files": [
+    "dist"
+  ],
   "main": "./dist/magneto-utils.umd.js",
+  "module": "./dist/magneto-utils.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/magneto.es.js",
-      "require": "./dist/magneto.umd.js"
+      "import": "./dist/magneto-utils.es.js",
+      "require": "./dist/magneto-utils.umd.js"
     }
+  },
+  "engines": {
+    "node": "18"
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
@@ -48,6 +56,7 @@
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
+    "vite-plugin-dts": "^3.6.3",
     "vitest": "^0.34.6"
   },
   "publishConfig": {
